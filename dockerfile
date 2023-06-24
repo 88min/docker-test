@@ -4,7 +4,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /var/www/html/
 COPY source ./
-RUN chmod +x script.sh
+#RUN chmod +x script.sh
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-ENTRYPOINT ["./script.sh"]
+#ENTRYPOINT ["./script.sh"]
