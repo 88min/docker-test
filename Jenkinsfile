@@ -25,7 +25,7 @@ pipeline {
     stage('Deploy') {
             steps {
               script {
-                   sh "docker run -d -p 8081:80 leahlunasin/docker-test:mynginx"
+                   sh "kubectl apply -f service.yaml -f deployment.yaml"
                 }
               }
             }
