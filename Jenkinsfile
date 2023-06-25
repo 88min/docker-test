@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'clustermgr'} 
+  agent {label 'private'} 
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
