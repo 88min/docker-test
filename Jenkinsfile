@@ -1,4 +1,4 @@
-pipeline {
+ipipeline {
   agent {label 'cluster-mgr2'} 
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -25,7 +25,7 @@ pipeline {
     stage('Deploy') {
             steps {
               script {
-                   sh "kubectl apply -f service.yaml -f deployment.yaml"
+                   sh "kubectl apply -f deployment.yaml"
                 }
               }
             }
